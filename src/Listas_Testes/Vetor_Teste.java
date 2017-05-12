@@ -13,7 +13,7 @@ public class Vetor_Teste {
         
         for (int i = 0; i < 4 ;i++){
         Inserir(quantidade);
-        quantidade *= 10; 
+        quantidade *= 10;
         }
     }
     
