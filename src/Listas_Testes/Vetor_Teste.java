@@ -30,4 +30,8 @@ public class Vetor_Teste {
         
         System.out.format(String.format("Tempo gasto com o teste(%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
     }
+    
+    public void Buscar(){
+        
+    }
 }
