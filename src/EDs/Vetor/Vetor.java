@@ -19,7 +19,7 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
     
     public Vetor(int tamanhoInicial) {
     	vetor = (Tipo[]) new Object[tamanhoInicial];
-        this.QuantidadeDeSlots = tamanhoInicial;
+         this.QuantidadeDeSlots = tamanhoInicial;
     }
     
     @Override

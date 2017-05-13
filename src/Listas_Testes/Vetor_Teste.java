@@ -28,7 +28,7 @@ public class Vetor_Teste {
         }
         fim = System.nanoTime();
         
-        System.out.format(String.format("Tempo gasto com o teste(Inserir)(%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        System.out.format(String.format("Tempo gasto com o teste(Inserir) (%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
         
         if (this.Vetor.tamanho() == 20000000){
             Buscar();
