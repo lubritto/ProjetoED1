@@ -11,6 +11,8 @@ public class Benchmark {
     
     public static void main(String[] args) {
         
+        //Pedro passou por aqui
+        
         /* Instruções para os metodos: 
         *  Teste com For(Comum): "F"
         *  Teste com For(Foreach): "FC"
