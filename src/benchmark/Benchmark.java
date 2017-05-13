@@ -13,18 +13,7 @@ public class Benchmark {
         
         Benchmark inicio = new Benchmark();
         inicio.Inicio();
-        
-//        /* Array -> */ List<Integer> Array = new LinkedList<>();
-//        double inicio, fim;
-//        
-//        inicio = System.nanoTime();        
-//        for (int i = 0; i < 20000; i++) {
-//            Array.add(i);
-//        }
-//        fim = System.nanoTime();
-//        
-//        System.out.format(String.format("O tempo para inserir todos os elementos foi: %.2f", + (fim - inicio) / 1000000)+" milissegundos");
-        
+
 //        inicio = System.nanoTime();
 //        
 //        Array.add(0, 0);
