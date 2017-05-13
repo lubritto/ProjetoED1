@@ -13,7 +13,7 @@ public class Benchmark {
         
         Benchmark inicio = new Benchmark();
         inicio.Inicio();
-        // Esboço para lista encadeada
+        // 
 //        inicio = System.nanoTime();
 //        
 //        Array.add(0, 0);
