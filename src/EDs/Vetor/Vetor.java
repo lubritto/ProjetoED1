@@ -4,6 +4,7 @@ package EDs.Vetor;
 import java.util.Iterator;
 
 import EDs.Vetor.IVetor;
+import java.awt.BorderLayout;
 
 
 public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
@@ -23,7 +24,7 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
     
     @Override
     public boolean adicionar(Tipo objeto) {
-        this.garantaEspaco(); 
+        this.garantaEspaco();
         this.vetor[TotalDeObjetos] = objeto;
         this.TotalDeObjetos++;
         return true;
@@ -76,10 +77,10 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
     @Override
     public boolean contem(Tipo valor) {
         for (int i = 0; i < this.TotalDeObjetos; i++) { 
-            if (valor == this.vetor[i]) { 
+            if (valor.equals(this.vetor[i])) { 
                 return true; 
-            } 
-        } 
+            }
+        }
         return false;
     }
 
