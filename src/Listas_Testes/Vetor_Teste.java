@@ -4,7 +4,7 @@ import EDs.Vetor.Vetor;
 
 public class Vetor_Teste {
     
-    public Vetor<Integer> Vetor = new Vetor<Integer>();
+    public Vetor<Integer> Vetor = new Vetor<>();
 
     public void TodosOsTestes(){
         int quantidade = 20000;
@@ -19,7 +19,7 @@ public class Vetor_Teste {
         double inicio, fim;
         
         if (this.Vetor.NumeroDeSlots() < quant){
-           this.Vetor = new Vetor<Integer>(quant);
+           this.Vetor = new Vetor<>(quant);
         }
         
         inicio = System.nanoTime();

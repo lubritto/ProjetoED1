@@ -11,18 +11,6 @@ public class Benchmark {
     
     public static void main(String[] args) {
         
-        //Pedro passou por aqui
-        
-        /* Instruções para os metodos: 
-        *  Teste com For(Comum): "F"
-        *  Teste com For(Foreach): "FC"
-        *  Teste com Unidades: "k" - mil, exemplo, 20milhões = 20kk
-        *  Teste de Inserção: "I"
-        *  Teste de Busca: "B"
-        *  Teste de Remoção: "R"
-        *  Teste de Listagem: "L"
-        */
-        
         Benchmark inicio = new Benchmark();
         inicio.Inicio();
         
