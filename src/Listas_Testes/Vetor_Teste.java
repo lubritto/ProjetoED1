@@ -28,8 +28,6 @@ public class Vetor_Teste {
         }
         fim = System.nanoTime();
         
-        System.out.println("tamanho do vetor: " + this.Vetor.tamanho());
-        
         System.out.format(String.format("Tempo gasto com o teste(%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
     }
 }
