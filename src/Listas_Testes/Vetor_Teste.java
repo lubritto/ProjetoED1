@@ -28,12 +28,12 @@ public class Vetor_Teste {
         }
         fim = System.nanoTime();
         
-        System.out.format(String.format("Tempo gasto com o teste(%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        System.out.format(String.format("Tempo gasto com o teste(Inserir)(%d) : %.2f", + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
         Buscar();
     }
     
     public void Buscar(){
-        System.out.println("Buscando todos os itens dentro do Array");
+        System.out.println("Teste de Busca...");
         
         double inicio, fim;
         
@@ -43,6 +43,6 @@ public class Vetor_Teste {
              }
         fim = System.nanoTime();
         
-        System.out.format(String.format("Tempo gasto com o teste de (%d) : %.2f", + this.Vetor.tamanho() ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        System.out.format(String.format("Tempo gasto com o teste(Busca) de (%d) : %.2f", + this.Vetor.tamanho() ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
     }
 }
