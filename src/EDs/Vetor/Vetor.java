@@ -10,6 +10,7 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
     
     Tipo[] vetor;
     private int TotalDeObjetos = 0;
+    private int QuantidadeDeSlots = 0;
     
     public Vetor() {
     	vetor = (Tipo[]) new Object[50];
@@ -17,6 +18,7 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
     
     public Vetor(int tamanhoInicial) {
     	vetor = (Tipo[]) new Object[tamanhoInicial];
+        this.QuantidadeDeSlots = tamanhoInicial;
     }
     
     @Override
@@ -111,5 +113,8 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
 	public Iterator<Tipo> iterator() {
 		return new EDs.Vetor.Iterator<Tipo>(this);
 	}
-    
+        
+    public int NumeroDeSlots(){
+        return this.QuantidadeDeSlots;
+    }
 }

@@ -7,7 +7,7 @@ import Listas_Testes.Vetor_Teste;
 
 public class Benchmark {
 
-    public static Vetor_Teste Vetor;
+    public static Vetor_Teste Vetor = new Vetor_Teste();
     
     public static void main(String[] args) {
         
@@ -59,10 +59,7 @@ public class Benchmark {
         System.out.println("|Lista de todas as Estruturas de Dados a serem testadas:|");
         System.out.println("|1ª- Vetor                                              |");
         System.out.println("|2ª- Lista Duplamente Encadeada                         |");
-        System.out.println("|3ª- Pilha                                              |");
-        System.out.println("|4ª- Fila                                               |");
-        System.out.println("|5ª- HashMap                                            |");
-        System.out.println("|-------------------------------------------------------|");
+        System.out.println("|3ª- HashMap                                            |");
         System.out.println("|---------------Aperte ENTER para começar---------------|");
         String tecla = entrada.nextLine();
         
