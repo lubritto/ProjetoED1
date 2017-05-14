@@ -14,7 +14,7 @@ public interface IVetor<Tipo> {
     public boolean adicionar(int posicao, Tipo valor);
     public Tipo obter(int posicao);
     public void remover(int posicao);
-    public boolean remover(Tipo valor);
+    public boolean removerValor(Tipo valor);
     public boolean contem(Tipo valor);
     public int tamanho();
     public void limpar();

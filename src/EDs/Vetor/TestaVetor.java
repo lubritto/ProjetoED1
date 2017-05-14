@@ -23,7 +23,7 @@ public class TestaVetor {
         }
         System.out.println(vetor.contem(nome1));
         
-        System.out.println(vetor.remover(nome2));
+        System.out.println(vetor.removerValor(nome2));
         
         for (int i = 0; i < vetor.tamanho(); i++){
             System.out.println(" | " + vetor.obter(i));

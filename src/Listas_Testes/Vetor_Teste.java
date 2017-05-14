@@ -1,6 +1,7 @@
 
 package Listas_Testes;
 import EDs.Vetor.Vetor;
+import java.awt.BorderLayout;
 
 public class Vetor_Teste {
     
@@ -8,10 +9,10 @@ public class Vetor_Teste {
 
     public void TodosOsTestes(){
         int quantidade = 20000;
-        
+        System.out.println("\n|------------------------Vetor--------------------------|");
         for (int i = 0; i < 4 ;i++){
-        Inserir(quantidade);
-        quantidade *= 10;
+            Inserir(quantidade);
+            quantidade *= 10;
         }
     }
     
@@ -54,6 +55,30 @@ public class Vetor_Teste {
                 Quantidade_Procurar *= 10;
                 inicio = System.nanoTime();
             }
-        } 
+        }
+        
+        Remover();
+        
     }
+    
+    private void Remover(){
+        double inicio, fim;
+        
+        int quantidade = 20000;
+        
+        System.out.println("\n|-------------------------------------------------------|");
+        System.out.println("|-----------------Teste de Remoção...-------------------|");
+        System.out.println("|Consiste em Remover os inteiros '20.000' ; '200.000';--|");
+        System.out.println("|'2.000.000'; '20.000.000' -----------------------------|");
+        System.out.println("|Removendo...-------------------------------------------|\n");
+        
+        for (int i = 0; i < 4 ;i++){
+            inicio = System.nanoTime();
+            if(this.Vetor.removerValor(quantidade)){
+            fim = System.nanoTime();
+            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+            quantidade *= 10;
+            }
+        }
+   }
 }

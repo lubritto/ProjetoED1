@@ -54,18 +54,28 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
         if (this.vetor[posicao] == null | posicao < 0) { 
             throw new IllegalArgumentException("Posição inválida"); 
         } 
-             for (int i = posicao; i < this.TotalDeObjetos - 1; i++) { 
-                this.vetor[i] = this.vetor[i + 1]; 
+            for (int i = posicao; i < this.TotalDeObjetos - 1; i++) { 
+               this.vetor[i] = null;
+               this.vetor[i] = this.vetor[i + 1]; 
+               this.vetor[i + 1] = null;
         } 
         this.TotalDeObjetos--;
     }
 
     @Override
-    public boolean remover(Tipo valor) {
+    public boolean removerValor(Tipo valor) {
             for (int i = 0; i < this.TotalDeObjetos; i++) { 
-                 if (valor == this.vetor[i]) { 
-                    for (int x = i; x < this.TotalDeObjetos - 1; x++){
-                         this.vetor[x] = this.vetor[x + 1];
+                if (valor.equals(this.vetor[i])) {
+                    for (int x = i; x <= this.TotalDeObjetos - 1; x++){
+                        //Verifica se X é o indice do ultimo slot.
+                        if (x == this.TotalDeObjetos - 1){
+                            this.vetor[x] = null;
+                            this.TotalDeObjetos--;
+                            return true; 
+                        }
+                        
+                        this.vetor[x] = this.vetor[x + 1];
+                        this.vetor[x + 1] = null;
                     }
                     this.TotalDeObjetos--;
                     return true; 
@@ -110,10 +120,10 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
         } 
     }
 
-	@Override
-	public Iterator<Tipo> iterator() {
-		return new EDs.Vetor.Iterator<Tipo>(this);
-	}
+    @Override
+    public Iterator<Tipo> iterator() {
+	return new EDs.Vetor.Iterator<Tipo>(this);
+    }
         
     public int NumeroDeSlots(){
         return this.QuantidadeDeSlots;
