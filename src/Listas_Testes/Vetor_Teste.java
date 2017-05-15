@@ -1,6 +1,5 @@
 package Listas_Testes;
 import EDs.Vetor.Vetor;
-import java.awt.BorderLayout;
 
 public class Vetor_Teste {
     
@@ -15,7 +14,7 @@ public class Vetor_Teste {
         }
     }
     
-    public void Inserir(int quant){
+    private void Inserir(int quant){
         double inicio, fim;
         
         if (this.Vetor.NumeroDeSlots() < quant){
@@ -35,7 +34,7 @@ public class Vetor_Teste {
         }
     }
     
-    public void Buscar_Elemento(){
+    private void Buscar_Elemento(){
         System.out.println("\n|-------------------------------------------------------|");
         System.out.println("|-------------Teste de Busca(Elemento)...---------------|");
         System.out.println("|Consiste em Buscar os inteiros '20.000' ; '200.000';---|");
@@ -108,5 +107,8 @@ public class Vetor_Teste {
                 quantidade *= 10;
             }
         }
+        
+        System.out.println("|----------Todos os testes finalizados(Vetor)----------|");
+        
    }
 }

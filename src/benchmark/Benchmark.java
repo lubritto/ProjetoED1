@@ -1,13 +1,13 @@
 package benchmark;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 import Listas_Testes.Vetor_Teste;
+import Listas_Testes.ListaEncadeada_Teste;
 
 public class Benchmark {
 
     public static Vetor_Teste Vetor = new Vetor_Teste();
+    public static ListaEncadeada_Teste ArrayLinked= new ListaEncadeada_Teste();
     
     public static void main(String[] args) {
         
@@ -43,6 +43,7 @@ public class Benchmark {
         String tecla = entrada.nextLine();
         
         Vetor.TodosOsTestes();
+        ArrayLinked.TodosOsTestes();
     }
 
 }
