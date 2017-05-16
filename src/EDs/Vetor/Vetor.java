@@ -32,7 +32,9 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
 
     @Override
     public boolean adicionar(int posicao, Tipo objeto) {
+        
         this.garantaEspaco(); 
+        
         if (!this.posicaoValida(posicao)) { 
             throw new IllegalArgumentException("Posição inválida"); 
         }
@@ -42,6 +44,7 @@ public class Vetor<Tipo> implements IVetor<Tipo>, Iterable<Tipo> {
             this.vetor[posicao] = objeto; 
             this.TotalDeObjetos++;
         return false;
+        
     }
 
     @Override

@@ -2,12 +2,12 @@ package benchmark;
 
 import java.util.Scanner;
 import Listas_Testes.Vetor_Teste;
-import Listas_Testes.ListaEncadeada_Teste;
+import benchmark.Lists_Tests.DoubleLinked_Test;
 
 public class Benchmark {
 
-    public static Vetor_Teste Vetor = new Vetor_Teste();
-    public static ListaEncadeada_Teste ArrayLinked= new ListaEncadeada_Teste();
+    public Vetor_Teste Vetor = new Vetor_Teste();
+    public DoubleLinked_Test DoubleLinked = new DoubleLinked_Test();
     
     public static void main(String[] args) {
         
@@ -43,7 +43,7 @@ public class Benchmark {
         String tecla = entrada.nextLine();
         
         Vetor.TodosOsTestes();
-        ArrayLinked.TodosOsTestes();
+        DoubleLinked.TodosOsTestes();
     }
 
 }

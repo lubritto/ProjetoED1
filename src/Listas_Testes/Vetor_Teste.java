@@ -4,14 +4,17 @@ import EDs.Vetor.Vetor;
 public class Vetor_Teste {
     
     public Vetor<Integer> Vetor = new Vetor<>();
-
+    
     public void TodosOsTestes(){
         int quantidade = 20000;
+        
         System.out.println("\n|------------------------Vetor--------------------------|");
+        
         for (int i = 0; i < 4 ;i++){
             Inserir(quantidade);
             quantidade *= 10;
         }
+        
     }
     
     private void Inserir(int quant){
@@ -76,13 +79,33 @@ public class Vetor_Teste {
         
         System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (0) : %.2f", + (fim - inicio) / 1000000)+" milissegundos" + "\n");
         
-        for(int i = 0; i < 3 ; i++){
-            inicio = System.nanoTime();
-            this.Vetor.obter(indice);
-            fim = System.nanoTime();
-            System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (%d) : %.2f", + indice ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
-            indice *= 10;
-        }
+        inicio = System.nanoTime();
+        this.Vetor.obter(19999);
+        fim = System.nanoTime();
+        
+        System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (19999) : %.2f", + (fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
+        inicio = System.nanoTime();
+        this.Vetor.obter(199999);
+        fim = System.nanoTime();
+        
+        System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (199999) : %.2f", + (fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
+        inicio = System.nanoTime();
+        this.Vetor.obter(1999999);
+        fim = System.nanoTime();
+        
+        System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (1999999) : %.2f", + (fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
+        
+//        
+//        for(int i = 0; i < 3 ; i++){
+//            inicio = System.nanoTime();
+//            this.Vetor.obter(indice);
+//            fim = System.nanoTime();
+//            System.out.format(String.format("Tempo gasto com o teste(Busca(Índice)) de (%d) : %.2f", + indice ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+//            indice *= 10;
+//        }
         
         Remover();
         
