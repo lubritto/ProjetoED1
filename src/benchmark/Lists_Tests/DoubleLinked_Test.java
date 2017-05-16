@@ -108,12 +108,38 @@ public class DoubleLinked_Test {
         quantidade = 20000;
         
         for (int i = 0; i < 4 ;i++){
+            
             inicio = System.nanoTime();
+            //Valor pela metade declarado
+            DoubleLinkedList.RemoveEntity(quantidade/2);
+            fim = System.nanoTime();
+            PrintTest(quantidade/2, "Remoção");
+            
+            inicio = System.nanoTime();
+            //Valor Original declarado
             DoubleLinkedList.RemoveEntity(quantidade);
             fim = System.nanoTime();
             PrintTest(quantidade, "Remoção");
+            
             quantidade *= 10;
         }
+        
+//        for (int i = 0; i < 4 ;i++){
+//            
+//            inicio = System.nanoTime();
+//            //Valor pela metade declarado
+//            this.Vetor.removerValor(quantidade/2);
+//            fim = System.nanoTime();
+//            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade/2 ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+//            
+//            //Valor Original declarado
+//            inicio = System.nanoTime();
+//            this.Vetor.removerValor(quantidade);
+//            fim = System.nanoTime();
+//            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+//
+//            quantidade *= 10;
+//        }
     }
     
     private void PrintTest(int quant, String modoTeste){

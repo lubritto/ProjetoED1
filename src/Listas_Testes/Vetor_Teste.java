@@ -118,9 +118,7 @@ public class Vetor_Teste {
     
     private void Remover(){
         double inicio, fim;
-        
-        int quantidade = 20000;
-        
+
         System.out.println("\n|-------------------------------------------------------|");
         System.out.println("|-----------------Teste de Remoção...-------------------|");
         System.out.println("|Consiste em Remover os inteiros'0' ;20.000'; '200.000';|");
@@ -131,18 +129,25 @@ public class Vetor_Teste {
         this.Vetor.remover(0);
         fim = System.nanoTime();
         
-        System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + 0 ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
+        int quantidade = 20000;
         
         for (int i = 0; i < 4 ;i++){
             
             inicio = System.nanoTime();
+            //Valor pela metade declarado
+            this.Vetor.removerValor(quantidade/2);
+            fim = System.nanoTime();
+            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade/2 ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
             
-            if(this.Vetor.removerValor(quantidade)){
-                fim = System.nanoTime();
-                System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
-                quantidade *= 10;
-            }
-            
+            //Valor Original declarado
+            inicio = System.nanoTime();
+            this.Vetor.removerValor(quantidade);
+            fim = System.nanoTime();
+            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+
+            quantidade *= 10;
         }
         
         System.out.println("|----------Todos os testes finalizados(Vetor)----------|");
