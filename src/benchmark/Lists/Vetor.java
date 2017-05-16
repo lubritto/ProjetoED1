@@ -6,6 +6,7 @@ import benchmark.Interfaces.IList;
 import benchmark.Iterators.VetorIterator;
 
 @SuppressWarnings("unchecked")
+
 public class Vetor<T> implements IList<T>, Iterable<T> {
 
 	public Vetor(){

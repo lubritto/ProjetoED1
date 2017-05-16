@@ -116,6 +116,8 @@ public class DoubleLinked_Test {
     }
     
     private void PrintTest(int quant, String modoTeste){
+        
         System.out.format(String.format("Tempo gasto com o teste(%s) (%d) : %.2f", modoTeste, + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
     }
 }

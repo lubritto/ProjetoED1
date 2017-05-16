@@ -86,6 +86,7 @@ public class Vetor_Test {
             indice *= 10;
         }
         
+        
         Remover();
         
     }

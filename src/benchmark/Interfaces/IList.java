@@ -1,6 +1,7 @@
 package benchmark.Interfaces;
 
 public interface IList<T> {
+    
 	public void Add(T entity);
 	public void Add(int position, T entity);
 	public void AddFirst(T entity);

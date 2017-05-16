@@ -11,7 +11,7 @@ public class SimplyLinkedList<T> implements IList<T>, Iterable<T> {
 	private int counter;
 	
 	public SimplyLinkedList() {
-		// TODO Auto-generated constructor stub
+
 		First = null;
 		Last = null;
 		counter = 0;
