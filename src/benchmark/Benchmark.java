@@ -39,7 +39,7 @@ public class Benchmark {
         System.out.println("|1ª- Vetor                                              |");
         System.out.println("|2ª- Lista Duplamente Encadeada                         |");
         System.out.println("|3ª- HashMap                                            |");
-        System.out.println("|---------------Digite a OPÇÃO para começar---------------|");
+        System.out.println("|--------------Digite a OPÇÃO para começar--------------|");
         int op = entrada.nextInt();
 
         switch (op) {
@@ -51,7 +51,7 @@ public class Benchmark {
 
             case 2:
                 DoubleLinked.TodosOsTestes();
-                 Inicio();
+                Inicio();
                 break;
 
             case 3:

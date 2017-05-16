@@ -5,6 +5,8 @@ public class Vetor_Teste {
     
     public Vetor<Integer> Vetor = new Vetor<>();
     
+    //Adicionar inicio e fim, remover inicio e fim, pegar inicio e fim
+    
     public void TodosOsTestes(){
         int quantidade = 20000;
         
@@ -50,12 +52,14 @@ public class Vetor_Teste {
         inicio = System.nanoTime();
         
         while(Quantidade_Procurar != 200000000){
+            
             if (this.Vetor.contem(Quantidade_Procurar)){
                 fim = System.nanoTime();
                 System.out.format(String.format("Tempo gasto com o teste(Busca(Elemento)) de (%d) : %.2f", + Quantidade_Procurar ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
                 Quantidade_Procurar *= 10;
                 inicio = System.nanoTime();
             }
+            
         }
         
         Buscar_Indice();
@@ -63,6 +67,7 @@ public class Vetor_Teste {
     }
     
     private void Buscar_Indice(){
+        
         System.out.println("\n|-------------------------------------------------------|");
         System.out.println("|--------------Teste de Busca(Índice)...----------------|");
         System.out.println("|Consiste em Buscar os Elementos nos Índices '0';'19.999|");
@@ -118,17 +123,26 @@ public class Vetor_Teste {
         
         System.out.println("\n|-------------------------------------------------------|");
         System.out.println("|-----------------Teste de Remoção...-------------------|");
-        System.out.println("|Consiste em Remover os inteiros '20.000' ; '200.000';--|");
+        System.out.println("|Consiste em Remover os inteiros'0' ;20.000'; '200.000';|");
         System.out.println("|'2.000.000'; '20.000.000' -----------------------------|");
         System.out.println("|Removendo...-------------------------------------------|\n");
         
+        inicio = System.nanoTime();
+        this.Vetor.remover(0);
+        fim = System.nanoTime();
+        
+        System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
+        
         for (int i = 0; i < 4 ;i++){
+            
             inicio = System.nanoTime();
+            
             if(this.Vetor.removerValor(quantidade)){
                 fim = System.nanoTime();
                 System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
                 quantidade *= 10;
             }
+            
         }
         
         System.out.println("|----------Todos os testes finalizados(Vetor)----------|");
