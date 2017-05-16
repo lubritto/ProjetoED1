@@ -92,6 +92,27 @@ public class DoubleLinked_Test {
 //            PrintTest(indice, "Busca(Índice)");
 //            indice *= 10;
 //        }
+
+        Remove();
+                
+    }
+    
+    private void Remove(){
+        System.out.println("\n|-------------------------------------------------------|");
+        System.out.println("|-----------------Teste de Remoção...-------------------|");
+        System.out.println("|Consiste em Remover os inteiros '20.000' ; '200.000';--|");
+        System.out.println("|'2.000.000'; '20.000.000' -----------------------------|");
+        System.out.println("|Removendo...-------------------------------------------|\n");
+        
+        quantidade = 20000;
+        
+        for (int i = 0; i < 4 ;i++){
+            inicio = System.nanoTime();
+            DoubleLinkedList.RemoveEntity(quantidade);
+            fim = System.nanoTime();
+            PrintTest(quantidade, "Remoção");
+            quantidade *= 10;
+        }
     }
     
     private void PrintTest(int quant, String modoTeste){

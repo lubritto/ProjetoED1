@@ -147,7 +147,7 @@ public class DoubleLinkedList<T> implements IList<T>, Iterable<T>
 	}
 
 	@Override
-	public void Remove(T entity) {
+	public void RemoveEntity(T entity) {
 		// TODO Auto-generated method stub
 		NoDoubleLinked<T> no = First;
 		

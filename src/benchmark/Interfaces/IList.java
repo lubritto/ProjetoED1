@@ -8,7 +8,7 @@ public interface IList<T> {
 	public void Remove(int position);
 	public void RemoveFirst();
 	public void RemoveLast();
-	public void Remove(T entity);
+	public void RemoveEntity(T entity);
 	
 	public T Get(int position);
 	

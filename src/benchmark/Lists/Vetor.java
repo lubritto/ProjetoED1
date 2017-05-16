@@ -144,7 +144,7 @@ public class Vetor<T> implements IList<T>, Iterable<T> {
 	}
 	
 	@Override
-	public void Remove(T entity) {
+	public void RemoveEntity(T entity) {
 		// TODO Auto-generated method stub
 		
 		for (int i = 0; i < Size(); i++) {
