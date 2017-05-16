@@ -57,6 +57,7 @@ public class Benchmark {
             case 3:
                 //HashMap.TodosOsTestes();
                 //Inicio();
+                //Teste
                 break;
                 
             default:
