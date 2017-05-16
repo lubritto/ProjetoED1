@@ -91,6 +91,7 @@ public class DoubleLinked_Test {
 //            fim = System.nanoTime();
 //            PrintTest(indice, "Busca(Índice)");
 //            indice *= 10;
+
 //        }
 
         Remove();
