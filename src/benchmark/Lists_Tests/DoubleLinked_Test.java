@@ -132,13 +132,13 @@ public class DoubleLinked_Test {
 
             inicio = System.nanoTime();
             //Valor pela metade declarado
-            DoubleLinkedList.RemoveEntity(quantidade / 2);
+            DoubleLinkedList.Remove(new Integer(quantidade / 2));
             fim = System.nanoTime();
             PrintTest(quantidade / 2, "Remoção");
 
             inicio = System.nanoTime();
             //Valor Original declarado
-            DoubleLinkedList.RemoveEntity(quantidade);
+            DoubleLinkedList.Remove(new Integer(quantidade));
             fim = System.nanoTime();
             PrintTest(quantidade, "Remoção");
 
