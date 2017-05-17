@@ -1,7 +1,7 @@
 package benchmark;
 
 import java.util.Scanner;
-import Listas_Testes.Vetor_Teste;
+import benchmark.Lists_Tests.Vetor_Teste;
 import benchmark.Lists_Tests.DoubleLinked_Test;
 
 public class Benchmark {
