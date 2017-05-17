@@ -6,7 +6,6 @@ import benchmark.Interfaces.IList;
 import benchmark.Iterators.VetorIterator;
 
 @SuppressWarnings("unchecked")
-
 public class Vetor<T> implements IList<T>, Iterable<T> {
 
 	public Vetor(){
@@ -46,18 +45,11 @@ public class Vetor<T> implements IList<T>, Iterable<T> {
 	public void Add(int position, T entity) {
 		// TODO Auto-generated method stub
 		CheckResize();	
-		T element = null;
-		
-		for (int i = 0; i < Size()+1; i++) {
-			if (i == position){
-				element = entities[i];
-				entities[i] = entity;
-			} else if (i > position){
-				entity = element;
-				element = entities[i];
-				entities[i] = entity;
-			}		
+
+		for (int i = Size(); i > position; i--) {
+			entities[i] = entities[i-1];
 		}
+		entities[position] = entity;
 		counter++;
 	}
 
@@ -83,21 +75,19 @@ public class Vetor<T> implements IList<T>, Iterable<T> {
 	@Override
 	public void Remove(int position) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < Size(); i++) {
-			if (i >= position){
-				entities[i] = entities[i+1];
-			}
+		for (int i = position; i < Size()-1; i++) {
+			entities[i] = entities[i+1];
 		}	
-		counter--;
+		RemoveLast();
 	}
 
 	@Override
 	public void RemoveFirst() {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < Size(); i++) {
+		for (int i = 0; i < Size()-1; i++) {
 			entities[i] = entities[i+1];
 		}	
-		counter--;
+		RemoveLast();
 	}
 
 	@Override
@@ -145,9 +135,8 @@ public class Vetor<T> implements IList<T>, Iterable<T> {
 	}
 	
 	@Override
-	public void RemoveEntity(T entity) {
-		// TODO Auto-generated method stub
-		
+	public void Remove(T entity) {
+		// TODO Auto-generated method stub	
 		for (int i = 0; i < Size(); i++) {
 			if (entities[i].equals(entity))
 				Remove(i);
