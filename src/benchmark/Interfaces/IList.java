@@ -9,7 +9,7 @@ public interface IList<T> {
 	public void Remove(int position);
 	public void RemoveFirst();
 	public void RemoveLast();
-	public void RemoveEntity(T entity);
+	public void Remove(T entity);
 	
 	public T Get(int position);
 	
