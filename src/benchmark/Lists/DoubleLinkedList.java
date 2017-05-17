@@ -1,4 +1,4 @@
-package benchmark.Listas;
+package benchmark.Lists;
 
 import java.util.Iterator;
 
