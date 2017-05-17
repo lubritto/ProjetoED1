@@ -1,4 +1,4 @@
-package benchmark.Lists;
+package benchmark.Listas;
 
 import java.util.Iterator;
 
@@ -85,14 +85,30 @@ public class DoubleLinkedList<T> implements IList<T>, Iterable<T>
 	@Override
 	public void Remove(int position) {
 		// TODO Auto-generated method stub
-		NoDoubleLinked<T> no = First;
+		NoDoubleLinked<T> no;
 		
-		for (int i = 0; i < position-1; i++) {
-			no = no.next;
+		if (position > Size()/2){
+			no = Last;
+			
+			for (int i = Size(); i > position; i--) {
+				no = no.back;
+			}
+			
+			no.next = no.next.next;
+			no.next.back = no;
+			
+		} else {
+			no = First;
+			
+			for (int i = 0; i < position-1; i++) {
+				no = no.next;
+			}
+			
+			no.next = no.next.next;
+			no.next.back = no;
+			
 		}
 		
-		no.next = no.next.next;
-		no.next.back = no;
 		
 		counter--;
 	}
@@ -147,7 +163,7 @@ public class DoubleLinkedList<T> implements IList<T>, Iterable<T>
 	}
 
 	@Override
-	public void RemoveEntity(T entity) {
+	public void Remove(T entity) {
 		// TODO Auto-generated method stub
 		NoDoubleLinked<T> no = First;
 		
