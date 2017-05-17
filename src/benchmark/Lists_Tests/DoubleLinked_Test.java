@@ -85,20 +85,13 @@ public class DoubleLinked_Test {
         fim = System.nanoTime();
         
         PrintTest(1999999, "Busca(Índice)");
-//        for(int i = 0; i < 3 ; i++){
-//            inicio = System.nanoTime();
-//            DoubleLinkedList.Get(indice);
-//            fim = System.nanoTime();
-//            PrintTest(indice, "Busca(Índice)");
-//            indice *= 10;
-
-//        }
 
         Remove();
                 
     }
     
     private void Remove(){
+        
         System.out.println("\n|-------------------------------------------------------|");
         System.out.println("|-----------------Teste de Remoção...-------------------|");
         System.out.println("|Consiste em Remover os inteiros '20.000' ; '200.000';--|");
@@ -124,22 +117,6 @@ public class DoubleLinked_Test {
             quantidade *= 10;
         }
         
-//        for (int i = 0; i < 4 ;i++){
-//            
-//            inicio = System.nanoTime();
-//            //Valor pela metade declarado
-//            this.Vetor.removerValor(quantidade/2);
-//            fim = System.nanoTime();
-//            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade/2 ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
-//            
-//            //Valor Original declarado
-//            inicio = System.nanoTime();
-//            this.Vetor.removerValor(quantidade);
-//            fim = System.nanoTime();
-//            System.out.format(String.format("Tempo gasto com o teste(Remoção) de (%d) : %.2f", + quantidade ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
-//
-//            quantidade *= 10;
-//        }
     }
     
     private void PrintTest(int quant, String modoTeste){
@@ -147,4 +124,5 @@ public class DoubleLinked_Test {
         System.out.format(String.format("Tempo gasto com o teste(%s) (%d) : %.2f", modoTeste, + quant ,(fim - inicio) / 1000000)+" milissegundos" + "\n");
         
     }
+    
 }
