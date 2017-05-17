@@ -1,12 +1,12 @@
 package benchmark;
 
 import java.util.Scanner;
-import benchmark.Lists_Tests.Vetor_Teste;
+import benchmark.Lists_Tests.Vetor_Test;
 import benchmark.Lists_Tests.DoubleLinked_Test;
 
 public class Benchmark {
 
-    public Vetor_Teste Vetor = new Vetor_Teste();
+    public Vetor_Test Vetor = new Vetor_Test();
     public DoubleLinked_Test DoubleLinked = new DoubleLinked_Test();
 
     public static void main(String[] args) {
