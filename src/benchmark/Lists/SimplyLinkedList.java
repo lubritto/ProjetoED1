@@ -138,7 +138,7 @@ public class SimplyLinkedList<T> implements IList<T>, Iterable<T> {
 	}
 
 	@Override
-	public void RemoveEntity(T entity) {
+	public void Remove(T entity) {
 		// TODO Auto-generated method stub
 		NoSimplyLinked<T> no = First;
 		
