@@ -13,24 +13,34 @@ public class Benchmark {
 
         Benchmark inicio = new Benchmark();
         inicio.Inicio();
-        // 
-//        inicio = System.nanoTime();
-//        
-//        Array.add(0, 0);
-//        
-//        fim = System.nanoTime();
-//        
-//        System.out.println("O tempo para adicionar no inicio foi " + (fim - inicio) / 1000000D);
-//        
-//        inicio = System.nanoTime();
-//        
-//        Array.add(0);
-//        
-//        fim = System.nanoTime();
-//        
-//        System.out.println("O tempo para adicionar no fim foi " + (fim - inicio) / 1000000D);
+
+        /**
+         * inicio = System.nanoTime();
+         *
+         * Array.add(0, 0);
+         *
+         * fim = System.nanoTime();
+         *
+         * System.out.println("O tempo para adicionar no inicio foi " + (fim -
+         * inicio) / 1000000D);
+         *
+         * inicio = System.nanoTime();
+         *
+         * Array.add(0);
+         *
+         * fim = System.nanoTime();
+         *
+         * System.out.println("O tempo para adicionar no fim foi " + (fim -
+         * inicio) / 1000000D);
+         *
+         */
     }
 
+    /**
+     * Metodo inicio onde contém as opções de teste para o usuario escolher o
+     * teste desajado
+    */
+    
     private void Inicio() {
 
         Scanner entrada = new Scanner(System.in);
@@ -59,11 +69,11 @@ public class Benchmark {
                 //Inicio();
                 //Teste
                 break;
-                
+
             default:
                 System.out.println("Digite uma opção válida!");
                 Inicio();
-                
+
         }
 
     }
